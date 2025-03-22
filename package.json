@@ -15,15 +15,26 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --build",
     "dev": "nodemon --exec ts-node ./src/main.ts",
-    "start": "node ./dist/main.js"
+    "start": "node -r module-alias/register dist/main.js",
+    "format": "prettier --write \"src/**/*.{ts,js,json,md}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,js,json,md}\"",
+    "db:migrate": "prisma migrate dev",
+    "db:generate": "prisma generate",
+    "db:studio": "prisma studio"
   },
   "devDependencies": {
     "@prisma/client": "^6.4.1",
     "@types/node": "^22.13.5",
+    "module-alias": "^2.2.3",
     "nodemon": "^3.1.9",
+    "prettier": "^3.5.3",
     "prisma": "^6.4.1",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "zod": "^3.24.2"
+  },
+  "_moduleAliases": {
+    "@": "./dist"
   }
 }

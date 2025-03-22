@@ -16,7 +16,6 @@ ts-quickstart-boilerplate/
 ├── src/
 │   └── main.ts
 ├── package.json
-├── README.md
 └── tsconfig.json
 ```
 
