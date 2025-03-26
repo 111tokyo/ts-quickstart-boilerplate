@@ -5,7 +5,7 @@ node_modules
 .env
 
 # Ignore build output directory
-dist/
+.build/
 
 # Ignore Prisma migration and database files
 prisma/migrations/

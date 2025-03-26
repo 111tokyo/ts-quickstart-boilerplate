@@ -14,8 +14,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --build",
-    "dev": "nodemon --exec ts-node ./src/main.ts",
-    "start": "node -r module-alias/register dist/main.js",
+    "dev": "nodemon --exec ts-node ./main.ts",
+    "start": "node -r module-alias/register ./.build/main.js",
     "format": "prettier --write \"src/**/*.{ts,js,json,md}\"",
     "format:check": "prettier --check \"src/**/*.{ts,js,json,md}\"",
     "db:migrate": "prisma migrate dev",
@@ -35,6 +35,6 @@
     "zod": "^3.24.2"
   },
   "_moduleAliases": {
-    "@": "./dist"
+    "@": "./.build"
   }
 }
